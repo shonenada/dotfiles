@@ -50,7 +50,7 @@ Bundle 'tfnico/vim-gradle'
 Bundle 'cespare/vim-toml'
 Bundle 'evanmiller/nginx-vim-syntax'
 " theme bundles
-Bundle 'chriskempson/base16-vim'
+Bundle 'tomasr/molokai'
 
 " key mapping
 let mapleader=","
