@@ -1,0 +1,16 @@
+[user]
+    name = shonenada
+    email = shonenada@gmail.com
+[color]
+    ui = auto
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    ci = commit
+    cim = commit -m
+    st = status
+    br = branch
+    co = checkout
+    upup = pull upstream
+    df = diff --no-ext-diff 
+[push]
+    default = current
