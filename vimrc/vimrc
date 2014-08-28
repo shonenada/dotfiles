@@ -10,6 +10,7 @@ set autoindent
 set hlsearch
 set mouse=a 
 set cursorline
+set cursorcolumn
 set laststatus=2
 set backspace=2
 
@@ -68,7 +69,7 @@ nmap <C-J> <C-W>j<C-W>_
 nmap <C-K> <C-W>k<C-W>_
 nmap <C-L> <C-W>l<C-W>_
 nmap <C-H> <C-W>h<C-W>_
-nmap ntr :NERDTree<CR>
+nmap ;ntr :NERDTree<CR>
 
 " custom commands
 com! FormatJSON %!python -m json.tool
