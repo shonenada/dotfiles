@@ -65,6 +65,7 @@ nmap <Leader>tb :TagbarToggle<CR>
 nmap <Leader>tt :NERDTreeToggle<CR>
 nmap <Leader>nt :tabnew<CR>
 nmap <TAB> :tabn<CR>
+nmap <S-TAB> :tabp<CR>
 nmap <C-J> <C-W>j<C-W>_
 nmap <C-K> <C-W>k<C-W>_
 nmap <C-L> <C-W>l<C-W>_
