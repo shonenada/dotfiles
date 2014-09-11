@@ -51,7 +51,7 @@ Bundle 'tfnico/vim-gradle'
 Bundle 'cespare/vim-toml'
 Bundle 'evanmiller/nginx-vim-syntax'
 " theme bundles
-Bundle 'tomasr/molokai'
+Bundle 'chriskempson/base16-vim'
 
 " key mapping
 let mapleader=","
@@ -59,8 +59,6 @@ imap jk <ESC>
 imap Jk <ESC>
 imap JK <ESC>
 imap jK <ESC>
-nmap 1 ^
-nmap 0 $
 nmap <Leader>tb :TagbarToggle<CR>
 nmap <Leader>tt :NERDTreeToggle<CR>
 nmap <Leader>nt :tabnew<CR>

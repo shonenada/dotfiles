@@ -13,5 +13,8 @@
     br = branch
     co = checkout
     df = diff --no-ext-diff
+    up = pull --ff-only
+    biu = !git branch --merged | grep -v '*' | grep -v 'master$' | xargs -n 1 git branch -d
+    upup = pull upstream
 [push]
     default = current
