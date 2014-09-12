@@ -70,7 +70,10 @@ nmap <C-L> <C-W>l<C-W>_
 nmap <C-H> <C-W>h<C-W>_
 nmap ;ntr :NERDTree<CR>
 nmap ;; :NERDTree<CR>
-nmap ;v :vsplit<CR>
+nmap ;dd :split<CR>
+nmap ;dn :new<CR>
+nmap ;vv :vsplit<CR>
+nmap ;vn :vnew<CR>
 
 " custom commands
 com! FormatJSON %!python -m json.tool
