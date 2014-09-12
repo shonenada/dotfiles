@@ -61,7 +61,7 @@ imap JK <ESC>
 imap jK <ESC>
 nmap <Leader>tb :TagbarToggle<CR>
 nmap <Leader>tt :NERDTreeToggle<CR>
-nmap <Leader>nt :tabnew<CR>
+nmap <C-t> :tabnew<CR>
 nmap <TAB> :tabn<CR>
 nmap <S-TAB> :tabp<CR>
 nmap <C-J> <C-W>j<C-W>_
@@ -69,6 +69,8 @@ nmap <C-K> <C-W>k<C-W>_
 nmap <C-L> <C-W>l<C-W>_
 nmap <C-H> <C-W>h<C-W>_
 nmap ;ntr :NERDTree<CR>
+nmap ;; :NERDTree<CR>
+nmap ;v :vsplit<CR>
 
 " custom commands
 com! FormatJSON %!python -m json.tool
