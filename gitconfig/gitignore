@@ -4,17 +4,18 @@
 [color]
     ui = auto
 [alias]
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-    alg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --numstat -- 
     ci = commit
     cim = commit -m
     st = status
-    stb = status -sb
     br = branch
     co = checkout
-    df = diff --no-ext-diff
+    df = diff --no-ext-diff 
+    upup = pull --ff-only upstream
+    um = pull --ff-only upstream master
     up = pull --ff-only
+    pu = pull
     biu = !git branch --merged | grep -v '*' | grep -v 'master$' | xargs -n 1 git branch -d
-    upup = pull upstream
+    kaca = !git branch --merged | grep -v '*' | grep -v 'master$'
 [push]
     default = current
