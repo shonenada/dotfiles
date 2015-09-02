@@ -51,8 +51,12 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tfnico/vim-gradle'
 Bundle 'cespare/vim-toml'
 Bundle 'evanmiller/nginx-vim-syntax'
+Bundle 'nvie/vim-flake8'
+" Bundle 'tpope/vim-clojure-static'
+Bundle 'guns/vim-clojure-highlight'
 " theme bundles
 Bundle 'tomasr/molokai'
+" Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/vim-tomorrow-theme'
 
 " key mapping
@@ -61,6 +65,10 @@ imap jk <ESC>
 imap Jk <ESC>
 imap JK <ESC>
 imap jK <ESC>
+imap <C-J> <Down>
+imap <C-K> <Up>
+imap <C-H> <Left>
+imap <C-L> <Right>
 nmap <Leader>tb :TagbarToggle<CR>
 nmap <Leader>tt :NERDTreeToggle<CR>
 nmap <C-t> :tabnew<CR>
@@ -116,13 +124,16 @@ else
 endif
 let base16colorspace=256
 set background=dark
-" colorscheme molokai
+
+"colorscheme molokai
 colorscheme Tomorrow-Night
 
 " indent
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 autocmd Filetype stylus setlocal ts=2 sts=2 sw=2
+autocmd Filetype clojure setlocal ts=2 sts=2 sw=2
 
 filetype plugin on
 filetype indent on
