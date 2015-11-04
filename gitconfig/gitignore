@@ -4,13 +4,14 @@
 [color]
     ui = auto
 [alias]
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --numstat -- 
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --numstat --
     ci = commit
     cim = commit -m
+    cam  = commit --amend
     st = status
     br = branch
     co = checkout
-    df = diff --no-ext-diff 
+    df = diff --no-ext-diff
     upup = pull --ff-only upstream
     um = pull --ff-only upstream master
     up = pull --ff-only
