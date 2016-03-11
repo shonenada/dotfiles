@@ -36,6 +36,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'mattn/emmet-vim'
+Bundle "mileszs/ack.vim"
+Bundle "rking/ag.vim"
 " file type bundles
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'derekwyatt/vim-scala'
@@ -43,6 +45,7 @@ Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'sophacles/vim-bundle-mako'
 Bundle 'othree/html5.vim'
 Bundle 'sprsquish/thrift.vim'
+" Bundle 'fatih/vim-go'
 Bundle 'tonyseek/rust.vim'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'wavded/vim-stylus'
@@ -55,9 +58,10 @@ Bundle 'nvie/vim-flake8'
 " Bundle 'tpope/vim-clojure-static'
 Bundle 'guns/vim-clojure-highlight'
 " theme bundles
-Bundle 'tomasr/molokai'
+" Bundle 'tomasr/molokai'
 " Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/vim-tomorrow-theme'
+
 
 " key mapping
 let mapleader=","
@@ -78,7 +82,9 @@ nmap <C-J> <C-W>j<C-W>_
 nmap <C-K> <C-W>k<C-W>_
 nmap <C-L> <C-W>l<C-W>_
 nmap <C-H> <C-W>h<C-W>_
+nmap <F8> :TagbarToggle<CR>
 nmap ;ntr :NERDTree<CR>
+nmap ;tt :TagbarToggle<CR>
 nmap ;; :NERDTree<CR>
 nmap ;dd :split<CR>
 nmap ;dn :new<CR>
@@ -102,9 +108,17 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11'
 let g:syntastic_java_javac_config_file_enabled = 1
 let g:loaded_syntastic_rst_rst2pseudoxml_checker = 1
 let g:jinja_syntax_html = 1
+let g:go_disable_autoinstall = 0
+
+let g:ackpreview = 1
+let g:ackhighlight = 1
+let g:agpreview = 1
+let g:ag_highlight = 1
+
 if filereadable('/usr/local/bin/ctags')
     let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 endif
+
 function! FiletypeHook(config)
     if has_key(a:config, 'language')
         let &filetype = a:config['language']
@@ -132,6 +146,8 @@ colorscheme Tomorrow-Night
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
+autocmd Filetype css setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype stylus setlocal ts=2 sts=2 sw=2
 autocmd Filetype clojure setlocal ts=2 sts=2 sw=2
 
