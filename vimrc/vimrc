@@ -8,12 +8,13 @@ set softtabstop=4 tabstop=4 shiftwidth=4
 set expandtab
 set autoindent
 set hlsearch
-set mouse=a 
+set mouse=a
 set cursorline
 set cursorcolumn
 set laststatus=2
 set backspace=2
 set scrolloff=5
+set encoding=utf-8
 
 " initialize vundle
 if !isdirectory(expand("~/.vim/bundle/vundle/.git"))
@@ -33,7 +34,7 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline-theme'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'mattn/emmet-vim'
 Bundle "mileszs/ack.vim"
