@@ -56,7 +56,7 @@ Bundle 'tfnico/vim-gradle'
 Bundle 'cespare/vim-toml'
 Bundle 'evanmiller/nginx-vim-syntax'
 Bundle 'nvie/vim-flake8'
-" Bundle 'tpope/vim-clojure-static'
+Bundle 'guns/vim-clojure-static'
 Bundle 'guns/vim-clojure-highlight'
 " theme bundles
 " Bundle 'tomasr/molokai'
