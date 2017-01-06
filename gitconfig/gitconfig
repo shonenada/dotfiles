@@ -1,6 +1,7 @@
 [user]
     name = shonenada
     email = shonenada@gmail.com
+    signingkey = 
 [color]
     ui = auto
 [alias]
@@ -8,8 +9,11 @@
     ci = commit
     cim = commit -m
     cam  = commit --amend
+    mg = merge --no-ff
     st = status
     br = branch
+    brs = branch -v
+    res = remote -v
     co = checkout
     df = diff --no-ext-diff
     upup = pull --ff-only upstream
@@ -18,5 +22,7 @@
     pu = pull
     biu = !git branch --merged | grep -v '*' | grep -v 'master$' | xargs -n 1 git branch -d
     kaca = !git branch --merged | grep -v '*' | grep -v 'master$'
+    cdf = "!git diff $@ | cdiff; true"
+    sdf = "!git diff $@ | cdiff -s; true"
 [push]
     default = current
