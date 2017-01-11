@@ -23,6 +23,6 @@
     biu = !git branch --merged | grep -v '*' | grep -v 'master$' | xargs -n 1 git branch -d
     kaca = !git branch --merged | grep -v '*' | grep -v 'master$'
     cdf = "!git diff $@ | cdiff; true"
-    sdf = "!git diff $@ | cdiff -s; true"
+    sdf = "!git diff $@ | cdiff -s -w 0; true"
 [push]
     default = current
