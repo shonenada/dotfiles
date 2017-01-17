@@ -1,0 +1,9 @@
+var:
+  option:
+    simplification: true
+  previously_selected_schema: luna_pinyin_simp
+  schema_access_time:
+    kaomoji: 1448434393
+    luna_pinyin: 1448434736
+    luna_pinyin_simp: 1448434816
+    meow_emoji: 1448428462
