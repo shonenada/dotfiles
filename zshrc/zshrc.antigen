@@ -1,0 +1,47 @@
+if [ -n "$(command -v brew)" ]; then
+    source `brew --prefix`/share/antigen/antigen.zsh
+else
+    source $HOME/.antigen/antigen.zsh
+fi
+
+if [ -x /usr/libexec/path_helper ]; then
+    unset PATH
+    eval "$(/usr/libexec/path_helper -s)"
+fi
+
+antigen use oh-my-zsh
+
+antigen bundle git
+
+antigen bundle colored-man-pages
+antigen bundle tonyseek/oh-my-zsh-virtualenv-prompt
+
+antigen bundle brew
+antigen bundle brew-cask
+antigen bundle vasyharan/zsh-brew-services
+antigen bundle pyenv
+antigen bundle pip
+antigen bundle autojump
+antigen bundle cargo
+antigen bundle cabal
+
+antigen bundle ssh-agent
+antigen bundle gpg-agent
+antigen bundle zsh-users/zsh-completions src
+
+antigen theme tonyseek/oh-my-zsh-seeker-theme seeker
+
+antigen apply
+
+# Enforce to use the custom binary path
+if [ -n "$USER_PATH" ]; then
+    export PATH="$USER_PATH:$PATH"
+fi
+if [ -n "$VIRTUAL_ENV" ]; then
+    export PATH="$VIRTUAL_ENV/bin:$PATH"
+fi
+if [ -n "$GOPATH" ]; then
+    export PATH="$PATH:$GOPATH/bin"
+fi
+
+export PATH=$HOME/.local/bin:$PATH
