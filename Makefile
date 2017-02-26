@@ -2,9 +2,9 @@
 CONFIG_HOME = $$HOME/.config
 
 ifeq ($(shell uname -s),Darwin)
-	lnopts="-sfh"
+	lnopts = -sfh
 else
-	lnopts="-sf"
+	lnopts = -sf
 endif
 
 link-all: link-vimrc link-zshrc link-gitconfig link-gnupg
@@ -19,7 +19,7 @@ link-zshrc: zshrc/zshrc
 .PHONY: link-zshrc
 
 link-gitconfig: gitconfig/gitconfig
-	ln $$CONFIG_HOME/gitconfig/gitconfig $$HOME/.gitconfig
+	ln $(lnopts) $$CONFIG_HOME/gitconfig/gitconfig $$HOME/.gitconfig
 .PHONY: link-gitconfig
 
 link-gnupg: gnupg/gpg.conf gnupg/gpg-agent.conf
