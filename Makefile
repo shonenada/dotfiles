@@ -1,23 +1,29 @@
 
 CONFIG_HOME = $$HOME/.config
 
+ifeq ($(shell uname -s),Darwin)
+	lnopts="-sfh"
+else
+	lnopts="-sf"
+endif
+
 link-all: link-vimrc link-zshrc link-gitconfig link-gnupg
 .PHONY: link-all
 
 link-vimrc: vimrc/vimrc
-	ln -sfh $$CONFIG_HOME/vimrc/vimrc $$HOME/.vimrc
+	ln $(lnopts) $$CONFIG_HOME/vimrc/vimrc $$HOME/.vimrc
 .PHONY: link-vimrc
 
 link-zshrc: zshrc/zshrc
-	ln -sfh $$CONFIG_HOME/zshrc/zshrc $$HOME/.zshrc
+	ln $(lnopts) $$CONFIG_HOME/zshrc/zshrc $$HOME/.zshrc
 .PHONY: link-zshrc
 
 link-gitconfig: gitconfig/gitconfig
-	ln -sfh $$CONFIG_HOME/gitconfig/gitconfig $$HOME/.gitconfig
+	ln $$CONFIG_HOME/gitconfig/gitconfig $$HOME/.gitconfig
 .PHONY: link-gitconfig
 
 link-gnupg: gnupg/gpg.conf gnupg/gpg-agent.conf
 	mkdir $$HOME/.gnupg
-	ln -sfh $$CONFIG_HOME/gnupg/gpg.conf $$HOME/.gnupg/gng.conf
-	ln -sfh $$CONFIG_HOME/gnupg/gpg-agent.conf $$HOME/.gnupg/gpg-agent.conf
+	ln $(lnopts) $$CONFIG_HOME/gnupg/gpg.conf $$HOME/.gnupg/gng.conf
+	ln $(lnopts) $$CONFIG_HOME/gnupg/gpg-agent.conf $$HOME/.gnupg/gpg-agent.conf
 .PHONY: link-gnupg
