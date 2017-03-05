@@ -34,7 +34,7 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
-Bundle 'vim-airline/vim-airline-theme'
+" Bundle 'vim-airline/vim-airline-theme'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'mattn/emmet-vim'
 Bundle "mileszs/ack.vim"
@@ -45,13 +45,14 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'sophacles/vim-bundle-mako'
 Bundle 'othree/html5.vim'
-Bundle 'sprsquish/thrift.vim'
-" Bundle 'fatih/vim-go'
+Bundle 'solarnz/thrift.vim'
+Bundle 'fatih/vim-go'
+Bundle 'neovimhaskell/haskell-vim'
 Bundle 'rust-lang/rust.vim'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'jansenm/vim-cmake'
-Bundle 'vim-ruby/vim-ruby'
+" Bundle 'vim-ruby/vim-ruby'
 Bundle 'tfnico/vim-gradle'
 Bundle 'cespare/vim-toml'
 Bundle 'evanmiller/nginx-vim-syntax'
@@ -61,6 +62,8 @@ Bundle 'vim-scripts/VimClojure'
 " Bundle 'tomasr/molokai'
 " Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/vim-tomorrow-theme'
+
+Bundle 'rizzatti/dash.vim'
 
 
 " key mapping
@@ -92,7 +95,7 @@ nmap ;vv :vsplit<CR>
 nmap ;vn :vnew<CR>
 
 " custom commands
-com! FormatJSON %!python -m json.tool
+" com! FormatJSON %!python -m json.tool
 
 " configurations of plugins
 let g:nerdtree_tabs_open_on_console_startup = 0
