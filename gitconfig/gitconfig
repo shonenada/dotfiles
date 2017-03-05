@@ -26,3 +26,5 @@
     sdf = "!git diff $@ | cdiff -s -w 0; true"
 [push]
     default = current
+[commit]
+    gpgsign = true
