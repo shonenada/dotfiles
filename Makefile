@@ -10,6 +10,10 @@ endif
 link-all: link-vimrc link-zshrc link-gitconfig link-gnupg
 .PHONY: link-all
 
+link-home:
+	ln $(lnopts) $(shell pwd) $(CONFIG_HOME)
+.PHONY: link-home
+
 link-vimrc: vimrc/vimrc
 	ln $(lnopts) $(CONFIG_HOME)/vimrc/vimrc $$HOME/.vimrc
 .PHONY: link-vimrc
