@@ -49,6 +49,7 @@ Bundle 'solarnz/thrift.vim'
 Bundle 'fatih/vim-go'
 Bundle 'neovimhaskell/haskell-vim'
 Bundle 'rust-lang/rust.vim'
+Bundle 'racer-rust/vim-racer'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'jansenm/vim-cmake'
@@ -103,21 +104,24 @@ let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'jellybeans'
-let NERDTreeIgnore = ['\.py[oc]$', '__pycache__', '\.egg-info']
-let g:ctrlp_custom_ignore = 'node_modules\/\|pyc\|\.git\|__pycache__\|\.class'
+let NERDTreeIgnore = ['\.py[oc]$', '__pycache__', '\.egg-info',]
+let g:ctrlp_custom_ignore = 'node_modules\/\|pyc\|\.git\|__pycache__\|\.class\|target\/'
 let g:tagbar_ctags_bin='/usr/bin/ctags'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_working_path_mode = 0
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
-let g:syntastic_java_javac_config_file_enabled = 1
+let g:syntastic_java_javac_config_file_enabled = 0
 let g:loaded_syntastic_rst_rst2pseudoxml_checker = 1
 let g:jinja_syntax_html = 1
 let g:go_disable_autoinstall = 0
-
+let g:go_version_warning = 0
+let g:rustfmt_autosave = 1
 let g:ackpreview = 1
 let g:ackhighlight = 1
 let g:agpreview = 1
 let g:ag_highlight = 1
+let g:racer_cmd = "/Users/shonenada/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
 
 if filereadable('/usr/local/bin/ctags')
     let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
@@ -149,11 +153,17 @@ colorscheme Tomorrow-Night
 " indent
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 autocmd Filetype css setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype stylus setlocal ts=2 sts=2 sw=2
 autocmd Filetype clojure setlocal ts=2 sts=2 sw=2
+
+au FileType rust nmap <C-j> <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gv <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 filetype plugin on
 filetype indent on

@@ -24,6 +24,8 @@
     kaca = !git branch --merged | grep -v '*' | grep -v 'master$'
     cdf = "!git diff $@ | cdiff; true"
     sdf = "!git diff $@ | cdiff -s -w 0; true"
+    pk = cherry-pick
+    wtf = !git commit -m"\"`curl -L -s https://commitlog.wolege.ca`"\"
 [push]
     default = current
 [commit]
