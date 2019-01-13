@@ -22,8 +22,8 @@
     pu = pull
     biu = !git branch --merged | grep -v '*' | grep -v 'master$' | xargs -n 1 git branch -d
     kaca = !git branch --merged | grep -v '*' | grep -v 'master$'
-    cdf = "!git diff $@ | cdiff; true"
-    sdf = "!git diff $@ | cdiff -s -w 0; true"
+    cdf = "!git diff $@ | ydiff; true"
+    sdf = "!git diff $@ | ydiff -s -w 0; true"
     pk = cherry-pick
     wtf = !git commit -m"\"`curl -L -s https://commitlog.wolege.ca`"\"
 [push]
