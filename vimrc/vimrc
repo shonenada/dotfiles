@@ -115,11 +115,11 @@ let g:loaded_syntastic_rst_rst2pseudoxml_checker = 1
 let g:jinja_syntax_html = 1
 let g:go_disable_autoinstall = 0
 let g:go_version_warning = 0
-let g:rustfmt_autosave = 1
 let g:ackpreview = 1
 let g:ackhighlight = 1
 let g:agpreview = 1
 let g:ag_highlight = 1
+let g:rustfmt_autosave = 1
 let g:racer_cmd = "/Users/shonenada/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
 
@@ -167,3 +167,8 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 filetype plugin on
 filetype indent on
+
+hi Normal guibg=NONE ctermbg=NONE
+hi Normal ctermbg=none
+hi NonText ctermbg=none
+hi LineNr ctermbg=none
