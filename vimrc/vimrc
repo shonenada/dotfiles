@@ -160,7 +160,7 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype stylus setlocal ts=2 sts=2 sw=2
 autocmd Filetype clojure setlocal ts=2 sts=2 sw=2
 
-au FileType rust nmap <C-j> <Plug>(rust-def)
+au FileType rust nmap <C-g><C-d> <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gv <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
