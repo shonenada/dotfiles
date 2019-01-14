@@ -105,6 +105,7 @@ let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'jellybeans'
 let NERDTreeIgnore = ['\.py[oc]$', '__pycache__', '\.egg-info',]
+let g:NERDTreeNodeDelimiter = "\u00a0"
 let g:ctrlp_custom_ignore = 'node_modules\/\|pyc\|\.git\|__pycache__\|\.class\|target\/'
 let g:tagbar_ctags_bin='/usr/bin/ctags'
 let g:ctrlp_use_caching = 1
@@ -120,7 +121,7 @@ let g:ackhighlight = 1
 let g:agpreview = 1
 let g:ag_highlight = 1
 let g:rustfmt_autosave = 1
-let g:racer_cmd = "/Users/shonenada/.cargo/bin/racer"
+let g:racer_cmd = "~/.cargo/bin/racer"
 let g:racer_experimental_completer = 1
 
 if filereadable('/usr/local/bin/ctags')
