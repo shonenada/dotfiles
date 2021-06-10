@@ -34,7 +34,7 @@ link-gnupg: gnupg/gpg.conf gnupg/gpg-agent.conf
 
 link-i3: config/i3/config
 	mkdir -p $$HOME/.config/i3
-	ln $(lnopts) $(CONFIG_HOME)/gnupg/gpg.conf $$HOME/.config/i3/config
+	ln $(lnopts) $(CONFIG_HOME)/config/i3/config $$HOME/.config/i3/config
 
 clean:
 	rm $$HOME/.vimrc
