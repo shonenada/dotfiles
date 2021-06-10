@@ -60,6 +60,7 @@ bindsym $mod+k focus down
 bindsym $mod+h focus left
 bindsym $mod+l focus right
 bindsym Mod1+Tab focus right
+bindsym Mod1+Shift+Tab focus left
 # bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
