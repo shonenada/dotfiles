@@ -39,6 +39,9 @@ link-i3: config/i3/config
 link-xinitrc: config/xorg/xinitrc
 	ln $(lnopts) $(CONFIG_HOME)/config/xorg/xinitrc $$HOME/.xinitrc
 
+link-keymap: config/xorg/Xmodmap
+	ln $(lnopts) $(CONFIG_HOME)/config/xorg/Xmodmap $$HOME/.Xmodmap
+
 clean:
 	rm $$HOME/.vimrc
 	rm $$HOME/.zshrc

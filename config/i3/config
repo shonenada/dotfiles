@@ -5,6 +5,27 @@
 
 set $mod Mod4
 
+set_from_resource $fg i3wm.foreground #f8f8f2
+set_from_resource $bg i3wm.background #282a36
+set_from_resource $black i3wm.color0 #000000
+set_from_resource $blackLight i3wm.color8 #4d4d4d
+set_from_resource $red i3wm.color1 #ff5555
+set_from_resource $redLight i3wm.color9 #ff6e67
+set_from_resource $green i3wm.color2 #50fa7b
+set_from_resource $greenLight i3wm.color10 #5af78e
+set_from_resource $yellow i3wm.color3 #f1fa8c
+set_from_resource $yellowLight i3wm.color11 #f4f99d
+set_from_resource $blue i3wm.color4 #bd93f9
+set_from_resource $blueLight i3wm.color12 #caa9fa
+# set_from_resource $magenta i3wm.color5 #ff79c6
+# set_from_resource $magentaLight i3wm.color13 #ff92d0
+set $magenta #fd5402
+set $magentaLight #fe9c01
+set_from_resource $cyan i3wm.color6 #f8be9fd
+set_from_resource $cyanLight i3wm.color14 #9aedfe
+set_from_resource $white i3wm.color7 #bfbfbf
+set_from_resource $whiteLight i3wm.color15 #e6e6e6
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:JetBrains Mono 10, Noto Sans Mono CJK SC 10
@@ -186,16 +207,25 @@ bar {
         status_command i3status
 }
 
-for_window [class="plasmashell"] floating enable
-for_window [title="Desktop - Plasma"] kill, floating enable, border none
+# class                 border     backgr.      text    indicator  child_border
+client.focused          $magentaLight   $magentaLight     $black  $red       $magentaLight
+client.focused_inactive $bg        $bg          $fg     $bg       $blackLight
+client.unfocused        $bg        $bg          $fg     $bg       $blackLight
+# client.urgent         $bg        $bg          $fg     $bg        $bg
+# client.placeholder    $bg        $bg          $fg     $bg        $bg
+
+client.background       $bg
+
+# for_window [class="plasmashell"] floating enable
+# for_window [title="Desktop - Plasma"] kill, floating enable, border none
 
 # set $menu --no-startup-id qdbus org.kde.krunner /App display
 # bindsym $mod+d exec $menu
 
 bindsym $mod+space exec rofi -show drun
 exec feh --randomize --bg-fill ~/Pictures
-exec fcitx
-exec compton -b
+exec fcitx &
+# exec compton -b
 
 # new_window none
 # new_float normal
