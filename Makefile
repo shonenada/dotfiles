@@ -36,6 +36,9 @@ link-i3: config/i3/config
 	mkdir -p $$HOME/.config/i3
 	ln $(lnopts) $(CONFIG_HOME)/config/i3/config $$HOME/.config/i3/config
 
+link-xinitrc: config/xorg/xinitrc
+	ln $(lnopts) $(CONFIG_HOME)/config/xorg/xinitrc $$HOME/.xinitrc
+
 clean:
 	rm $$HOME/.vimrc
 	rm $$HOME/.zshrc
