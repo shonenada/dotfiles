@@ -42,6 +42,9 @@ link-xinitrc: config/xorg/xinitrc
 link-keymap: config/xorg/Xmodmap
 	ln $(lnopts) $(CONFIG_HOME)/config/xorg/Xmodmap $$HOME/.Xmodmap
 
+link-polybar: config/polybar
+	ln $(lnopts) $(CONFIG_HOME)/config/polybar $$HOME/.config/polybar
+
 clean:
 	rm $$HOME/.vimrc
 	rm $$HOME/.zshrc
