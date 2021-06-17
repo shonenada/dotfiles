@@ -50,7 +50,7 @@ enable-ipc = true
 monitor = ${env:PRIMARY_MONITOR}
 ; monitor = eDP
 width = 100%
-height = 26
+height = 20
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
@@ -59,7 +59,7 @@ fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 0
 line-color = ${colors.foreground}
 
 border-size = 0
@@ -70,16 +70,16 @@ padding-right = 2
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = Iosevka:bold:pixelsize=9;3
-font-1 = Cantarell:bold:pixelsize=9;2
-font-2 = Cantarell Extra Bold:style=Extra Bold:pixelsize=13;3
-font-3 = Font Awesome 5 Free Solid:style=Solid:pixelsize=11;3
+font-0 = Iosevka:bold:pixelsize=8;3
+font-1 = Cantarell:bold:pixelsize=8;2
+font-2 = Cantarell Extra Bold:style=Extra Bold:pixelsize=10;3
+font-3 = Font Awesome 5 Free Solid:style=Solid:pixelsize=10;3
 font-4 = Monaco:pixelsize=9;2
 font-5 = Roboto:pixelsize=9;2
 
 modules-left = i3 xwindow
 ; modules-center = mpd
-modules-right = uptime-pretty wallpaper filesystem backlight-acpi pulseaudio cpu temperature memory wlan battery date powermenu
+modules-right = uptime-pretty wallpaper pulseaudio filesystem cpu memory wlan battery date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -127,12 +127,12 @@ padding-right = 2
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = Iosevka:bold:pixelsize=9;3
-font-1 = Cantarell:bold:pixelsize=9;2
-font-2 = Cantarell Extra Bold:style=Extra Bold:pixelsize=13;3
-font-3 = Font Awesome 5 Free Solid:style=Solid:pixelsize=11;3
-font-4 = Monaco:pixelsize=9;2
-font-5 = Roboto:pixelsize=9;2
+font-0 = Iosevka:bold:pixelsize=8;3
+font-1 = Cantarell:bold:pixelsize=8;2
+font-2 = Cantarell Extra Bold:style=Extra Bold:pixelsize=10;3
+font-3 = Font Awesome 5 Free Solid:style=Solid:pixelsize=10;3
+font-4 = Monaco:pixelsize=8;2
+font-5 = Roboto:pixelsize=8;2
 
 modules-left = i3 xwindow
 ; modules-center = mpd
@@ -339,10 +339,10 @@ format-disconnected =
 [module/date]
 ; {{{
 type = internal/date
-interval = 5
+interval = 1
 
-date = 
-date-alt = "%Y-%m-%d "
+date = "%Y-%m-%d "
+date-alt = ""
 
 time = %H:%M
 time-alt = %H:%M:%S
@@ -506,8 +506,8 @@ screenchange-reload = true
 
 [global/wm]
 ; {{{
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 ; }}}
 
 ; vim:ft=dosini fdm=marker

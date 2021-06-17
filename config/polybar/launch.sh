@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DOUBLE_MONITOR="false"
+DOUBLE_MONITOR="true"
 
 # Terminate already running bar instances
 killall -q polybar
