@@ -1,0 +1,16 @@
+#!/bin/bash
+
+function git_remove_squash_merged_local_branch() {
+  echo "Start removing out-dated local squash-merged branches"
+  git checkout -q master &&
+    git for-each-ref refs/heads/ "--format=%(refname:short)" |
+    while read branch; do
+      ancestor=$(git merge-base master $branch) &&
+        [[ $(git cherry master $(git commit-tree $(git rev-parse $branch^{tree}) -p $ancestor -m _)) == "-"* ]] &&
+        echo "Remove branch $branch"
+        git branch -D $branch
+    done
+  echo "Finished removing out-dated local squash-merged branches"
+}
+
+git_remove_squash_merged_local_branch

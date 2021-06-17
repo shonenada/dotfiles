@@ -45,6 +45,9 @@ link-keymap: config/xorg/Xmodmap
 link-polybar: config/polybar
 	ln $(lnopts) $(CONFIG_HOME)/config/polybar $$HOME/.config/polybar
 
+link-bin-git-biu: bin/git-biu
+	ln $(lnopts) $(CONFIG_HOME)/bin/git-biu /usr/local/bin/git-biu
+
 clean:
 	rm $$HOME/.vimrc
 	rm $$HOME/.zshrc
