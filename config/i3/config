@@ -28,7 +28,7 @@ set_from_resource $whiteLight i3wm.color15 #e6e6e6
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:JetBrains Mono 10, Noto Sans Mono CJK SC 10
+font pango:JetBrains Mono NL 8, Noto Sans Mono CJK SC 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -56,7 +56,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec konsole
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -80,8 +81,12 @@ bindsym $mod+j focus up
 bindsym $mod+k focus down
 bindsym $mod+h focus left
 bindsym $mod+l focus right
-bindsym Mod1+Tab focus right
-bindsym Mod1+Shift+Tab focus left
+
+# bindsym Mod1+Tab focus left
+# bindsym Mod1+Shift+Tab focus right
+# alt + tab
+bindsym Mod1+Tab exec /home/shonenada/.local/bin/i3-cycle right
+bindsym Mod1+Shift+Tab exec /home/shonenada/.local/bin/i3-cycle left
 # bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
@@ -172,8 +177,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym Mod1+shift+x exec flameshot gui
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -208,8 +211,14 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
+# floating_maximum_size 3456 x 2592
+focus_follows_mouse no
+default_border pixel 4
+default_floating_border pixel 4
 gaps inner 8
-gaps outer 0
+gaps outer 4
+smart_gaps on
+smart_borders no_gaps
 
 # class                 border     backgr.      text    indicator  child_border
 client.focused          $magentaLight   $magentaLight     $black  $red       $magentaLight
@@ -217,16 +226,21 @@ client.focused_inactive $bg        $bg          $fg     $bg       $blackLight
 client.unfocused        $bg        $bg          $fg     $bg       $blackLight
 # client.urgent         $bg        $bg          $fg     $bg        $bg
 # client.placeholder    $bg        $bg          $fg     $bg        $bg
-
 client.background       $bg
 
 # for_window [class="plasmashell"] floating enable
 # for_window [title="Desktop - Plasma"] kill, floating enable, border none
 
-bindsym $mod+space exec rofi -show drun
+# Shortcut
+bindsym $mod+space exec rofi -show run
+bindsym Mod1+shift+x exec flameshot gui
+bindsym Mod1+f exec nautilus
+
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec feh --randomize --bg-fill ~/Pictures
-exec fcitx &
+exec fcitx5 &
+exec /usr/bin/dunst &
+exec feh --randomize --bg-fill ~/Pictures/wallpapers
+
 # exec compton -b
 
 # new_window none
