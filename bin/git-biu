@@ -4,14 +4,16 @@ function git_remove_squash_merged_local_branch() {
   git checkout -q master &&
     git for-each-ref refs/heads/ "--format=%(refname:short)" |
     while read branch; do
-      ancestor=$(git merge-base master $branch) &&
-        [[ $(git cherry master $(git commit-tree $(git rev-parse $branch^{tree}) -p $ancestor -m _)) == "-"* ]] &&
-        if [[ "$branch" -ne "master" || "$branch" -ne "main" ]]; then
-          echo "Remove branch $branch"
-          if [[ "$1" -ne "dry-run" ]]; then
+      if [[ "${branch}" = "master" || "${branch}" = "main" ]]; then
+        continue
+      fi
+
+      ancestor=$(git merge-base master $branch)
+      if [[ $(git cherry master $(git commit-tree $(git rev-parse $branch^{tree}) -p $ancestor -m _)) == "-"* ]];then
+          if [[ "$1" != "dry-run" ]]; then
             git branch -D $branch
           fi
-        fi
+      fi
     done
 }
 
