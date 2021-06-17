@@ -79,9 +79,9 @@ font-5 = Roboto:pixelsize=9;2
 
 modules-left = i3 xwindow
 ; modules-center = mpd
-modules-right = uptime-pretty wallpaper pulseaudio filesystem cpu memory wlan battery date powermenu
+modules-right = uptime-pretty wallpaper pulseaudio filesystem cpu memory eth wlan battery date powermenu
 
-tray-position = right
+tray-position = righ
 tray-padding = 2
 
 ;wm-restack = bspwm
@@ -305,13 +305,13 @@ label = RAM %percentage_used:2%%
 [module/wlan]
 ; {{{
 type = internal/network
-interface = wlp1s0
+interface = wlo1
 interval = 3.0
 
 format-connected = <label-connected>
-label-connected =  %essid%
+label-connected =  %essid% %local_ip%
 
-format-disconnected =
+format-disconnected = N/A
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -321,7 +321,7 @@ format-disconnected =
 [module/eth]
 ; {{{
 type = internal/network
-interface = enp4s0
+interface = enp89s0
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -341,7 +341,7 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = "%Y-%m-%d "
+date = "%Y-%m-%d %a "
 date-alt = ""
 
 time = %H:%M
