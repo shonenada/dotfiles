@@ -12,6 +12,8 @@ function git_remove_squash_merged_local_branch() {
       if [[ $(git cherry master $(git commit-tree $(git rev-parse $branch^{tree}) -p $ancestor -m _)) == "-"* ]];then
           if [[ "$1" != "dry-run" ]]; then
             git branch -D $branch
+          else
+            echo $branch
           fi
       fi
     done
