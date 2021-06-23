@@ -30,3 +30,5 @@
     default = current
 [commit]
     gpgsign = false
+[pager]
+    branch = false
