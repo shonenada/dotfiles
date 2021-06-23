@@ -20,8 +20,8 @@
     um = pull --ff-only upstream master
     up = pull --ff-only
     pu = pull
-    kaca = !git branch --merged | grep -v '*' | grep -v 'master$' | grep -v 'release$' && git-biu dry-run
-    biu = !git branch --merged | grep -v '*' | grep -v 'master$' | grep -v 'release$' | xargs -n 1 git branch -d && git-biu
+    kaca = !git branch --merged | grep -v '*' | grep -v 'master$' | grep -v 'release$'; git-biu dry-run
+    biu = !git branch --merged | grep -v '*' | grep -v 'master$' | grep -v 'release$' | xargs -n 1 git branch -d; git-biu
     cdf = "!git diff $@ | ydiff; true"
     sdf = "!git diff $@ | ydiff -s -w 0; true"
     pk = cherry-pick
