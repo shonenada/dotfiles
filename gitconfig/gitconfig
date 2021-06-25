@@ -15,6 +15,7 @@
     brs = branch -v
     res = remote -v
     co = checkout
+    cob = checkout -b
     df = diff --no-ext-diff
     upup = pull --ff-only upstream
     um = pull --ff-only upstream master

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+LENGTH="${1:-"16"}"
+COUNT="${2:-"1"}"
+PW=`pwgen $LENGTH $COUNT`
+echo $PW
+echo -n $PW | xsel --clipboard --input
