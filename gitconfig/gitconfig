@@ -16,13 +16,14 @@
     res = remote -v
     co = checkout
     cob = checkout -b
-    df = diff --no-ext-diff
+    df = !git --no-pager diff --no-ext-diff
     upup = pull --ff-only upstream
     um = pull --ff-only upstream master
     up = pull --ff-only
     pu = pull
-    kaca = !git branch --merged | grep -v '*' | grep -v 'master$' | grep -v 'release$'; git-biu dry-run
-    biu = !git branch --merged | grep -v '*' | grep -v 'master$' | grep -v 'release$' | xargs -n 1 git branch -d; git-biu
+    kaca = !git branch --merged | grep -v '*' | grep -v 'master$' | grep -v 'release$'
+    biu = !git branch --merged | grep -v '*' | grep -v 'master$' | grep -v 'release$' | xargs git branch -d
+    kacax = !git-biu --dry-run
     cdf = "!git diff $@ | ydiff; true"
     sdf = "!git diff $@ | ydiff -s -w 0; true"
     pk = cherry-pick
@@ -33,3 +34,5 @@
     gpgsign = false
 [pager]
     branch = false
+[url "git@github.com:"]
+	insteadOf = https://github.com/
