@@ -1,53 +1,113 @@
 {
-    "files.eol": "\n",
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "k"],
-            "after": ["<Esc>"]
-        },
-        {
-            "before": ["j", "K"],
-            "after": ["<Esc>"]
-        },
-        {
-            "before": ["J", "k"],
-            "after": ["<Esc>"]
-        },
-        {
-            "before": ["J", "K"],
-            "after": ["<Esc>"]
-        },
-        {
-            "before": ["<C-j>"],
-            "after": ["<Down>"]
-        },
-        {
-            "before": ["<C-k>"],
-            "after": ["<Up>"]
-        },
-        {
-            "before": ["<C-l>"],
-            "after": ["<Right>"]
-        },
-        {
-            "before": ["<C-h>"],
-            "after": ["<Left>"]
-        },
-    ],
-
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true,
-    "editor.detectIndentation": false,
-
-    "git.ignoreMissingGitWarning": true,
-    "editor.rulers": [
-        80,
-        120
-    ],
-
+  "files.eol": "\n",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "git.ignoreMissingGitWarning": true,
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.wordWrap": "wordWrapColumn",
+  "[markdown]": {
     "editor.wordWrap": "wordWrapColumn",
-    "[markdown]": {
-        "editor.wordWrap": "wordWrapColumn",
-        "editor.wordWrapColumn": 80,
+    "editor.wordWrapColumn": 80
+  },
+  "window.commandCenter": 1,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     },
+    {
+      "before": [
+        "j",
+        "K"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "J",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "J",
+        "K"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "<C-j>"
+      ],
+      "after": [
+        "<Down>"
+      ]
+    },
+    {
+      "before": [
+        "<C-k>"
+      ],
+      "after": [
+        "<Up>"
+      ]
+    },
+    {
+      "before": [
+        "<C-l>"
+      ],
+      "after": [
+        "<Right>"
+      ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "after": [
+        "<Left>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        ";",
+        "v",
+        "v"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
+    }
+  ],
+  "vim.handleKeys": {},
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "workbench.colorTheme": "Monokai Dimmed",
+  "remote.SSH.remotePlatform": {
+    "volc-gpu-01": "linux"
+  },
+  "vim.commandLineModeKeyBindings": []
 }
