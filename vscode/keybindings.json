@@ -21,5 +21,21 @@
       "key": "alt+f12",
       "command": "workbench.action.terminal.toggleTerminal",
       "when": "terminal.active"
+    },
+    {
+      "key": "tab",
+      "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "shift+tab",
+        "command": "workbench.action.previousEditorInGroup"
+    // },
+    // {
+    //   "key": "tab",
+    //   "command": "workbench.action.nextEditor"
+    // },
+    // {
+    //     "key": "shift+tab",
+    //     "command": "workbench.action.previousEditor"
     }
 ]
