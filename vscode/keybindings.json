@@ -24,11 +24,13 @@
     },
     {
       "key": "tab",
-      "command": "workbench.action.nextEditorInGroup"
+      "command": "workbench.action.nextEditorInGroup",
+      "when": "vim.mode != 'Insert'"
     },
     {
-        "key": "shift+tab",
-        "command": "workbench.action.previousEditorInGroup"
+      "key": "shift+tab",
+      "command": "workbench.action.previousEditorInGroup",
+      "when": "vim.mode != 'Insert'"
     // },
     // {
     //   "key": "tab",
