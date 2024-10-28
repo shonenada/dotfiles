@@ -8,7 +8,6 @@
     80,
     120
   ],
-  "editor.wordWrap": "wordWrapColumn",
   "[markdown]": {
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 80
