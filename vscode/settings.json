@@ -98,6 +98,23 @@
       "commands": [
         "workbench.action.splitEditor"
       ]
+    },
+
+    {
+      "before": [
+        "<Tab>"
+      ],
+      "commands": [
+        "workbench.action.nextEditorInGroup"
+      ]
+    },
+    {
+      "before": [
+        "<S-Tab>"
+      ],
+      "commands": [
+        "workbench.action.previousEditorInGroup"
+      ]
     }
   ],
   "vim.handleKeys": {},
