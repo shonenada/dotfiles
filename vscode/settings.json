@@ -115,6 +115,22 @@
       "commands": [
         "workbench.action.previousEditorInGroup"
       ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-l>"
+      ],
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ]
     }
   ],
   "vim.handleKeys": {},
