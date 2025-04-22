@@ -48,5 +48,15 @@
       "key": "ctrl+r",
       "command": "-editor.action.startFindReplaceAction",
       "when": "editorFocus || editorIsOpen"
+    },
+    {
+      "key": "ctrl+r",
+      "command": "-go.test.previous",
+      "when": "editorLangId == 'go'"
+    },
+    {
+      "key": "ctrl+r",
+      "command": "-workbench.action.tasks.reRunTask",
+      "when": "taskCommandsRegistered && !terminalFocus"
     }
 ]
