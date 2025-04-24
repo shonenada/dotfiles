@@ -25,13 +25,13 @@
     {
       "key": "tab",
       "command": "workbench.action.nextEditorInGroup",
-      "when": "vim.mode != 'Insert'"
+      "when": "vim.mode != 'Insert' && !terminalFocus"
     },
     {
       "key": "shift+tab",
       "command": "workbench.action.previousEditorInGroup",
-      "when": "vim.mode != 'Insert'"
-    // },
+      "when": "vim.mode != 'Insert' && !terminalFocus"
+    },
     // {
     //   "key": "tab",
     //   "command": "workbench.action.nextEditor"
@@ -39,7 +39,7 @@
     // {
     //     "key": "shift+tab",
     //     "command": "workbench.action.previousEditor"
-    },
+    // },
     {
       "key": "ctrl+r",
       "command": "-workbench.action.openRecent"
@@ -58,5 +58,9 @@
       "key": "ctrl+r",
       "command": "-workbench.action.tasks.reRunTask",
       "when": "taskCommandsRegistered && !terminalFocus"
+    },
+    {
+      "key": "cmd+i",
+      "command": "composerMode.agent"
     }
 ]

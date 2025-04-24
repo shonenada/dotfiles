@@ -1,6 +1,5 @@
 {
   "files.eol": "\n",
-  "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
   "git.ignoreMissingGitWarning": true,
@@ -100,22 +99,22 @@
       ]
     },
 
-    {
-      "before": [
-        "<Tab>"
-      ],
-      "commands": [
-        "workbench.action.nextEditorInGroup"
-      ]
-    },
-    {
-      "before": [
-        "<S-Tab>"
-      ],
-      "commands": [
-        "workbench.action.previousEditorInGroup"
-      ]
-    },
+    // {
+    //   "before": [
+    //     "<Tab>"
+    //   ],
+    //   "commands": [
+    //     "workbench.action.nextEditorInGroup"
+    //   ]
+    // },
+    // {
+    //   "before": [
+    //     "<S-Tab>"
+    //   ],
+    //   "commands": [
+    //     "workbench.action.previousEditorInGroup"
+    //   ]
+    // },
     {
       "before": [
         "<C-h>"
@@ -137,7 +136,7 @@
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
-  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.colorTheme": "Monokai",
   "remote.SSH.remotePlatform": {
     "volc-gpu-01": "linux"
   },
