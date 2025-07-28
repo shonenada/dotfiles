@@ -137,8 +137,7 @@
     "vscodevim.vim": 1
   },
   "workbench.colorTheme": "Monokai",
-  "remote.SSH.remotePlatform": {
-    "volc-gpu-01": "linux"
-  },
-  "vim.commandLineModeKeyBindings": []
+  "vim.commandLineModeKeyBindings": [],
+"terminal.integrated.scrollback": 500000,
+"editor.fontSize": 11
 }
