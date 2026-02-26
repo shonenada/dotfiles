@@ -140,7 +140,7 @@ keybinds clear-defaults=true {
     }
     shared_except "locked" {
         bind "Ctrl l" { MoveFocusOrTab "right"; }
-        bind "Ctrl h" { MoveFocus "left"; }
+        bind "Ctrl h" { MoveFocusOrTab "left"; }
         bind "Ctrl j" { MoveFocus "down"; }
         bind "Ctrl k" { MoveFocus "up"; }
 
@@ -248,7 +248,7 @@ keybinds clear-defaults=true {
         bind "k" { MoveFocus "up"; SwitchToMode "normal"; }
         bind "l" { MoveFocus "right"; SwitchToMode "normal"; }
         bind "n" { GoToNextTab; SwitchToMode "normal"; }
-        bind "o" { FocusNextPane; }
+        bind "o" { FocusNextPane; SwitchToMode "normal"; }
         bind "p" { GoToPreviousTab; SwitchToMode "normal"; }
         bind "z" { ToggleFocusFullscreen; SwitchToMode "normal"; }
     }
