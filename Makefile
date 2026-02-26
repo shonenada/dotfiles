@@ -26,6 +26,11 @@ link-gitconfig: gitconfig/gitconfig
 	ln $(lnopts) $(CONFIG_HOME)/gitconfig/gitconfig $$HOME/.gitconfig
 .PHONY: link-gitconfig
 
+link-zellij:
+	mkdir -p $$HOME/.config/zellij/
+	ln $(lnopts) $(CONFIG_HOME)/zellij/config.kdl $$HOME/.config/zellij/config.kdl
+.PHONY: link-zellij
+
 link-gnupg: gnupg/gpg.conf gnupg/gpg-agent.conf
 	mkdir $$HOME/.gnupg
 	ln $(lnopts) $(CONFIG_HOME)/gnupg/gpg.conf $$HOME/.gnupg/gng.conf
@@ -47,6 +52,7 @@ link-polybar: config/polybar
 
 link-bin-git-biu: bin/git-biu
 	ln $(lnopts) $(CONFIG_HOME)/bin/git-biu /usr/local/bin/git-biu
+
 
 clean:
 	rm $$HOME/.vimrc
