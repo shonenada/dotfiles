@@ -1,10 +1,10 @@
 keybind = cmd+s>r=reload_config
 
 # theme = tokyonight
-theme = Catppuccin Macchiato
-font-family = CaskaydiaCove Nerd Font Mono
-font-family = Menlo
-font-size = 18
+# theme = Catppuccin Macchiato
+# font-family = CaskaydiaCove Nerd Font Mono
+# font-family = Menlo
+# font-size = 18
 macos-option-as-alt = true
 
 # Fix Alt+arrow sending readline sequences (e.g. \x1bf) instead of xterm
@@ -21,12 +21,12 @@ mouse-scroll-multiplier = 3
 background-opacity = 1
 background-blur = false
 
-unfocused-split-opacity = 0.5
+unfocused-split-opacity = 0.7
 unfocused-split-fill = #181926
 # split-divider-color = Dark Slate Gray
+
 # for fix claude code new line
 keybind = shift+enter=text:\x1b\r
-
 
 # Percentage, primary axis only
 quick-terminal-position = bottom
@@ -34,6 +34,7 @@ quick-terminal-position = bottom
 quick-terminal-size = 25%,50%
 keybind = global:cmd+¡=toggle_quick_terminal
 
+# https://github.com/dlants/dotfiles/tree/main/ghostty/shaders
 #custom-shader = ./shaders/cursor_blaze_no_trail.glsl
-custom-shader = ./shaders/cursor_smear_fade.glsl
+custom-shader = ./shaders/cursor_smear_fade_rainbow.glsl
 #custom-shader = ./ghostty-shaders/cursor_blaze.glsl
