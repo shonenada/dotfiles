@@ -139,8 +139,8 @@ keybinds clear-defaults=true {
         }
     }
     shared_except "locked" {
-        bind "Ctrl l" { MoveFocusOrTab "right"; }
-        bind "Ctrl h" { MoveFocusOrTab "left"; }
+        bind "Ctrl l" { MoveFocus "right"; }
+        bind "Ctrl h" { MoveFocus "left"; }
         bind "Ctrl j" { MoveFocus "down"; }
         bind "Ctrl k" { MoveFocus "up"; }
 

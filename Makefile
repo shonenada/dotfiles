@@ -31,6 +31,10 @@ link-zellij:
 	ln $(lnopts) $(CONFIG_HOME)/zellij/config.kdl $$HOME/.config/zellij/config.kdl
 .PHONY: link-zellij
 
+link-ghostty:
+	ln $(lnopts) $(CONFIG_HOME)/ghostty/config "$$HOME/Library/Application Support/com.mitchellh.ghostty/config"
+.PHONY: link-ghostty
+
 link-gnupg: gnupg/gpg.conf gnupg/gpg-agent.conf
 	mkdir $$HOME/.gnupg
 	ln $(lnopts) $(CONFIG_HOME)/gnupg/gpg.conf $$HOME/.gnupg/gng.conf
