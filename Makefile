@@ -32,8 +32,7 @@ link-zellij:
 .PHONY: link-zellij
 
 link-ghostty:
-	ln $(lnopts) $(CONFIG_HOME)/ghostty/config "$$HOME/Library/Application Support/com.mitchellh.ghostty/config"
-	ln $(lnopts) $(CONFIG_HOME)/ghostty/shaders/ "$$HOME/Library/Application Support/com.mitchellh.ghostty/"
+	ln $(lnopts) $(CONFIG_HOME)/ghostty/ "$$HOME/.config"
 .PHONY: link-ghostty
 
 link-gnupg: gnupg/gpg.conf gnupg/gpg-agent.conf
