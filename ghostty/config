@@ -7,6 +7,10 @@
 # font-size = 18
 macos-option-as-alt = true
 
+# remove keybind used by vim
+keybind = ctrl+l=unbind
+keybind = ctrl+h=unbind
+
 # Fix Alt+arrow sending readline sequences (e.g. \x1bf) instead of xterm
 # modifiers, which causes Alt+Right to collide with Alt+f in Zellij
 keybind = alt+right=text:\x1b[1;3C
