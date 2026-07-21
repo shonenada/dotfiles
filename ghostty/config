@@ -5,6 +5,9 @@
 # font-family = CaskaydiaCove Nerd Font Mono
 # font-family = Menlo
 # font-size = 18
+
+# font-family = "Maple Mono NF"
+font-codepoint-map = "U+4E00-U+9FFF,U+3400-U+4DBF = LXGW WenKai"
 macos-option-as-alt = true
 
 # remove keybind used by vim
