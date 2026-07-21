@@ -7,6 +7,10 @@ else
 	lnopts = -sf
 endif
 
+init-macos:
+	$(MAKE) -C macos init
+.PHONY: init-macos
+
 link-all: link-vimrc link-zshrc link-gitconfig link-gnupg
 .PHONY: link-all
 
