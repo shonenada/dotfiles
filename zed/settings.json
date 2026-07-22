@@ -22,6 +22,29 @@
   },
   "ui_font_size": 16,
   "buffer_font_size": 15,
+  "wrap_guides": [80, 120],
+  "languages": {
+    "JavaScript": {
+      "tab_size": 2,
+      "hard_tabs": false
+    },
+    "TypeScript": {
+      "tab_size": 2,
+      "hard_tabs": false
+    },
+    "JSON": {
+      "tab_size": 2,
+      "hard_tabs": false
+    },
+    "Python": {
+      "tab_size": 4,
+      "hard_tabs": false
+    },
+    "Go": {
+      "tab_size": 4,
+      "hard_tabs": true
+    }
+  },
   "theme": {
     "mode": "system",
     "light": "One Light",
