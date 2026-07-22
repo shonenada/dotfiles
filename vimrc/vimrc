@@ -40,7 +40,7 @@ Bundle 'mattn/emmet-vim'
 Bundle "mileszs/ack.vim"
 Bundle "rking/ag.vim"
 " file type bundles
-Bundle 'kchmck/vim-coffee-script'
+" Bundle 'kchmck/vim-coffee-script'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'sophacles/vim-bundle-mako'
@@ -49,12 +49,12 @@ Bundle 'solarnz/thrift.vim'
 Bundle 'fatih/vim-go'
 Bundle 'neovimhaskell/haskell-vim'
 Bundle 'rust-lang/rust.vim'
-Bundle 'racer-rust/vim-racer'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'wavded/vim-stylus'
-Bundle 'jansenm/vim-cmake'
+" Bundle 'racer-rust/vim-racer'
+" Bundle 'cakebaker/scss-syntax.vim'
+" Bundle 'wavded/vim-stylus'
+" Bundle 'jansenm/vim-cmake'
 " Bundle 'vim-ruby/vim-ruby'
-Bundle 'tfnico/vim-gradle'
+" Bundle 'tfnico/vim-gradle'
 Bundle 'cespare/vim-toml'
 " Bundle 'evanmiller/nginx-vim-syntax'
 Bundle 'chr4/nginx.vim'
@@ -65,7 +65,7 @@ Bundle 'vim-scripts/VimClojure'
 " Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/vim-tomorrow-theme'
 
-Bundle 'rizzatti/dash.vim'
+" Bundle 'rizzatti/dash.vim'
 
 
 " key mapping
@@ -159,7 +159,7 @@ autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2
 autocmd Filetype css setlocal ts=2 sts=2 sw=2
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+"autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype stylus setlocal ts=2 sts=2 sw=2
 autocmd Filetype clojure setlocal ts=2 sts=2 sw=2
 
