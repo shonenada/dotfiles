@@ -35,6 +35,12 @@ link-zellij:
 	ln $(lnopts) $(CONFIG_HOME)/zellij/config.kdl $$HOME/.config/zellij/config.kdl
 .PHONY: link-zellij
 
+link-zed:
+	mkdir -p $$HOME/.config/zed/
+	ln $(lnopts) $(CONFIG_HOME)/zed/settings.json $$HOME/.config/zed/settings.json
+	ln $(lnopts) $(CONFIG_HOME)/zed/keymap.json $$HOME/.config/zed/keymap.json
+.PHONY: link-zed
+
 link-ghostty:
 	ln $(lnopts) $(CONFIG_HOME)/ghostty/ "$$HOME/.config"
 .PHONY: link-ghostty
@@ -60,7 +66,6 @@ link-polybar: config/polybar
 
 link-bin-git-biu: bin/git-biu
 	ln $(lnopts) $(CONFIG_HOME)/bin/git-biu /usr/local/bin/git-biu
-
 
 clean:
 	rm $$HOME/.vimrc
