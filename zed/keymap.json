@@ -1,26 +1,42 @@
 [
   {
-    "context": "Editor && vim_mode == insert",
     "bindings": {
-      "j k": ["workspace::SendKeystrokes", "escape"]
+      "cmd-p": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      ", t b": "outline_panel::Toggle",
+      ", t t": "project_panel::Toggle",
+      "ctrl-t": "workspace::NewFile",
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePreviousItem",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "f8": "outline_panel::Toggle",
+      "; n t r": "project_panel::ToggleFocus",
+      "; t t": "outline_panel::Toggle",
+      "; ;": "project_panel::ToggleFocus",
+      "; d d": "pane::SplitHorizontal",
+      "; d n": "workspace::NewFileSplitHorizontal",
+      "; v v": "pane::SplitVertical",
+      "; v n": "workspace::NewFileSplitVertical"
     }
   },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
-      "j K": ["workspace::SendKeystrokes", "escape"]
-    }
-  },
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      "K k": ["workspace::SendKeystrokes", "escape"]
-    }
-  },
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      "J K": ["workspace::SendKeystrokes", "escape"]
+      "j k": "vim::NormalBefore",
+      "shift-j k": "vim::NormalBefore",
+      "shift-j shift-k": "vim::NormalBefore",
+      "j shift-k": "vim::NormalBefore",
+      "ctrl-j": "editor::MoveDown",
+      "ctrl-k": "editor::MoveUp",
+      "ctrl-h": "editor::MoveLeft",
+      "ctrl-l": "editor::MoveRight"
     }
   }
 ]
