@@ -7,6 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "favorite_models": [],
+    "model_parameters": [],
+    "terminal_init_command": ""
+  },
+  "disable_ai": false,
+  "edit_predictions": {
+    "provider": "zed",
+    "mode": "eager"
+  },
+  "show_edit_predictions": true,
+  "show_completions_on_input": true,
   "vim_mode": true,
   "project_panel": {
     "dock": "left"
@@ -21,7 +33,7 @@
     }
   },
   "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "buffer_font_size": 12.0,
   "wrap_guides": [80, 120],
   "languages": {
     "JavaScript": {
