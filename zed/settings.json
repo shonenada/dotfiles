@@ -7,6 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "vim": {
+    "use_system_clipboard": "never"
+  },
+  "cli_default_open_behavior": "new_window",
   "agent": {
     "favorite_models": [],
     "model_parameters": [],
