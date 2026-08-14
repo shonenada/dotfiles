@@ -67,6 +67,9 @@ link-polybar: config/polybar
 link-bin-git-biu: bin/git-biu
 	ln $(lnopts) $(CONFIG_HOME)/bin/git-biu /usr/local/bin/git-biu
 
+link-terraform:
+	ln $(lnopts) $(CONFIG_HOME)/terraform/terraformrc $$HOME/.terraformrc
+
 clean:
 	rm $$HOME/.vimrc
 	rm $$HOME/.zshrc
