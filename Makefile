@@ -70,6 +70,9 @@ link-bin-git-biu: bin/git-biu
 link-terraform:
 	ln $(lnopts) $(CONFIG_HOME)/terraform/terraformrc $$HOME/.terraformrc
 
+link-scripts:
+	sudo ln $(lnopts) $(CONFIG_HOME)/scripts/doh.sh /usr/local/bin/doh
+
 clean:
 	rm $$HOME/.vimrc
 	rm $$HOME/.zshrc
