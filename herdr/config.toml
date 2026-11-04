@@ -47,6 +47,8 @@ edit_scrollback = "prefix+e"
 
 # Herdr 的工作区与会话操作
 new_workspace = "prefix+n"
+previous_workspace = "prefix+up"
+next_workspace = "prefix+down"
 workspace_picker = "prefix+w"
 goto = "prefix+g"
 toggle_sidebar = "prefix+b"
