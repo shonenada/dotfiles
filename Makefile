@@ -76,7 +76,8 @@ link-scripts:
 link-herdr:
 	mkdir -p $$HOME/.config/herdr/
 	ln $(lnopts) $(CONFIG_HOME)/herdr/config.toml $$HOME/.config/herdr/config.toml
-.PHONY: link-zellij
+	ln $(lnopts) $(CONFIG_HOME)/herdr/focus-space.py $$HOME/.config/herdr/focus-space.py
+.PHONY: link-herdr
 
 clean:
 	rm $$HOME/.vimrc
