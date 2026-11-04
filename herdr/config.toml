@@ -18,7 +18,7 @@ hide_tab_bar_when_single_tab = false
 prefix = "ctrl+n"
 
 # 窗格：保留你在 Zellij 中常用的动作键
-split_vertical = ["prefix+r", "prefix+n", "alt+n"]
+split_vertical = ["prefix+r", "alt+n"]
 split_horizontal = "prefix+d"
 close_pane = "prefix+x"
 zoom = "prefix+f"
@@ -46,6 +46,7 @@ resize_mode = "alt+r"
 edit_scrollback = "prefix+e"
 
 # Herdr 的工作区与会话操作
+new_workspace = "prefix+n"
 workspace_picker = "prefix+w"
 goto = "prefix+g"
 toggle_sidebar = "prefix+b"
