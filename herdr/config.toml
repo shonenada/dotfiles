@@ -1,0 +1,53 @@
+onboarding = false
+
+[terminal]
+new_cwd = "follow"
+
+[ui]
+# 像 Zellij 一样，直接创建标签页，稍后再命名
+prompt_new_tab_name = false
+
+# 默认隐藏侧栏，需要时用 Ctrl+n b 展开
+sidebar_start_collapsed = true
+sidebar_collapsed_mode = "hidden"
+
+pane_borders = "always"
+hide_tab_bar_when_single_tab = false
+
+[keys]
+prefix = "ctrl+n"
+
+# 窗格：保留你在 Zellij 中常用的动作键
+split_vertical = ["prefix+r", "prefix+n", "alt+n"]
+split_horizontal = "prefix+d"
+close_pane = "prefix+x"
+zoom = "prefix+f"
+rename_pane = "prefix+c"
+cycle_pane_next = "prefix+p"
+
+# 切换窗格：支持前缀、Ctrl 和 Alt
+focus_pane_left = ["prefix+h", "ctrl+h", "alt+h", "alt+left"]
+focus_pane_down = ["prefix+j", "ctrl+j", "alt+j", "alt+down"]
+focus_pane_up = ["prefix+k", "ctrl+k", "alt+k", "alt+up"]
+focus_pane_right = ["prefix+l", "ctrl+l", "alt+l", "alt+right"]
+
+# 标签页
+new_tab = "ctrl+t"
+previous_tab = "prefix+left"
+next_tab = "prefix+right"
+switch_tab = ["prefix+1..9", "alt+1..9", "ctrl+1..9"]
+rename_tab = "prefix+shift+t"
+close_tab = "prefix+shift+x"
+move_tab_previous = "alt+i"
+move_tab_next = "alt+o"
+
+# 大小调整与历史输出
+resize_mode = "alt+r"
+edit_scrollback = "prefix+e"
+
+# Herdr 的工作区与会话操作
+workspace_picker = "prefix+w"
+goto = "prefix+g"
+toggle_sidebar = "prefix+b"
+detach = "prefix+q"
+help = "prefix+?"
