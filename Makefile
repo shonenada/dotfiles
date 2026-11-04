@@ -73,6 +73,11 @@ link-terraform:
 link-scripts:
 	sudo ln $(lnopts) $(CONFIG_HOME)/scripts/doh.sh /usr/local/bin/doh
 
+link-herdr:
+	mkdir -p $$HOME/.config/herdr/
+	ln $(lnopts) $(CONFIG_HOME)/herdr/config.toml $$HOME/.config/herdr/config.toml
+.PHONY: link-zellij
+
 clean:
 	rm $$HOME/.vimrc
 	rm $$HOME/.zshrc
