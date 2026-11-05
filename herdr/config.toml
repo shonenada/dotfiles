@@ -55,75 +55,57 @@ toggle_sidebar = "prefix+b"
 detach = "prefix+q"
 help = "prefix+?"
 
-# 当前版本的索引绑定仅支持数字键，功能键通过自定义命令按列表顺序跳转。
+# 按列表顺序跳转 Space；9 始终跳到最后一个。
 [[keys.command]]
-key = "ctrl+f1"
+key = "cmd+ctrl+1"
 type = "shell"
 command = 'python3 "$HOME/.config/herdr/focus-space.py" 1'
 description = "切换到 Space 1"
 
 [[keys.command]]
-key = "ctrl+f2"
+key = "cmd+ctrl+2"
 type = "shell"
 command = 'python3 "$HOME/.config/herdr/focus-space.py" 2'
 description = "切换到 Space 2"
 
 [[keys.command]]
-key = "ctrl+f3"
+key = "cmd+ctrl+3"
 type = "shell"
 command = 'python3 "$HOME/.config/herdr/focus-space.py" 3'
 description = "切换到 Space 3"
 
 [[keys.command]]
-key = "ctrl+f4"
+key = "cmd+ctrl+4"
 type = "shell"
 command = 'python3 "$HOME/.config/herdr/focus-space.py" 4'
 description = "切换到 Space 4"
 
 [[keys.command]]
-key = "ctrl+f5"
+key = "cmd+ctrl+5"
 type = "shell"
 command = 'python3 "$HOME/.config/herdr/focus-space.py" 5'
 description = "切换到 Space 5"
 
 [[keys.command]]
-key = "ctrl+f6"
+key = "cmd+ctrl+6"
 type = "shell"
 command = 'python3 "$HOME/.config/herdr/focus-space.py" 6'
 description = "切换到 Space 6"
 
 [[keys.command]]
-key = "ctrl+f7"
+key = "cmd+ctrl+7"
 type = "shell"
 command = 'python3 "$HOME/.config/herdr/focus-space.py" 7'
 description = "切换到 Space 7"
 
 [[keys.command]]
-key = "ctrl+f8"
+key = "cmd+ctrl+8"
 type = "shell"
 command = 'python3 "$HOME/.config/herdr/focus-space.py" 8'
 description = "切换到 Space 8"
 
 [[keys.command]]
-key = "ctrl+f9"
+key = "cmd+ctrl+9"
 type = "shell"
-command = 'python3 "$HOME/.config/herdr/focus-space.py" 9'
-description = "切换到 Space 9"
-
-[[keys.command]]
-key = "ctrl+f10"
-type = "shell"
-command = 'python3 "$HOME/.config/herdr/focus-space.py" 10'
-description = "切换到 Space 10"
-
-[[keys.command]]
-key = "ctrl+f11"
-type = "shell"
-command = 'python3 "$HOME/.config/herdr/focus-space.py" 11'
-description = "切换到 Space 11"
-
-[[keys.command]]
-key = "ctrl+f12"
-type = "shell"
-command = 'python3 "$HOME/.config/herdr/focus-space.py" 12'
-description = "切换到 Space 12"
+command = 'python3 "$HOME/.config/herdr/focus-space.py" last'
+description = "切换到最后一个 Space"
