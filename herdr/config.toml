@@ -25,7 +25,7 @@ zoom = "prefix+f"
 rename_pane = "prefix+c"
 cycle_pane_next = "prefix+p"
 
-# 切换窗格：Alt+h/j/k/l 或 Alt+方向键；Ctrl+h/j/k/l 留给 Vim。
+# 切换窗格：Alt+h/j/k/l 或 Alt+方向键。
 focus_pane_left = ["prefix+h", "alt+h", "alt+left"]
 focus_pane_down = ["alt+j", "alt+down"]
 focus_pane_up = ["alt+k", "alt+up"]
@@ -48,10 +48,10 @@ edit_scrollback = "prefix+e"
 # Herdr 的工作区与会话操作
 new_workspace = "prefix+n"
 # 内置导航会跨在线 machine，按侧栏顺序循环切换 Space。
-previous_workspace = ["prefix+up", "prefix+k", "cmd+ctrl+["]
-next_workspace = ["prefix+down", "prefix+j", "cmd+ctrl+]"]
-previous_agent = "cmd+ctrl+,"
-next_agent = "cmd+ctrl+."
+previous_workspace = ["prefix+up", "prefix+k", "cmd+ctrl+k"]
+next_workspace = ["prefix+down", "prefix+j", "cmd+ctrl+j"]
+previous_agent = "cmd+ctrl+["
+next_agent = "cmd+ctrl+]"
 workspace_picker = "prefix+w"
 goto = "prefix+g"
 toggle_sidebar = "prefix+b"
