@@ -48,10 +48,10 @@ edit_scrollback = "prefix+e"
 # Herdr 的工作区与会话操作
 new_workspace = "prefix+n"
 # 内置导航会跨在线 machine，按侧栏顺序循环切换 Space。
-previous_workspace = ["prefix+up", "prefix+k", "cmd+ctrl+k"]
-next_workspace = ["prefix+down", "prefix+j", "cmd+ctrl+j"]
-previous_agent = "cmd+ctrl+["
-next_agent = "cmd+ctrl+]"
+previous_workspace = ["prefix+up", "prefix+k", "cmd+ctrl+["]
+next_workspace = ["prefix+down", "prefix+j", "cmd+ctrl+]"]
+previous_agent = "cmd+ctrl+k"
+next_agent = "cmd+ctrl+j"
 workspace_picker = "prefix+w"
 goto = "prefix+g"
 toggle_sidebar = "prefix+b"
