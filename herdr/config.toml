@@ -6,6 +6,14 @@ new_cwd = "follow"
 [ui]
 # 像 Zellij 一样，直接创建标签页，稍后再命名
 prompt_new_tab_name = false
+notify_active_tab = true
+agent_panel_scope = "all"
+
+[ui.sound]
+enabled = false
+
+[ui.toast]
+delivery = "off"
 
 # 默认隐藏侧栏，需要时用 Ctrl+n b 展开
 sidebar_start_collapsed = true
