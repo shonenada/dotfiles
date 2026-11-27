@@ -6,14 +6,9 @@ new_cwd = "follow"
 [ui]
 # 像 Zellij 一样，直接创建标签页，稍后再命名
 prompt_new_tab_name = false
-notify_active_tab = true
-agent_panel_scope = "all"
-
-[ui.sound]
-enabled = false
-
-[ui.toast]
-delivery = "off"
+agent_panel_sort = "priority"
+status_indicators = "symbols"
+accent = "#89b4fa"
 
 # 默认隐藏侧栏，需要时用 Ctrl+n b 展开
 sidebar_start_collapsed = true
@@ -21,6 +16,13 @@ sidebar_collapsed_mode = "hidden"
 
 pane_borders = "always"
 hide_tab_bar_when_single_tab = false
+
+[ui.sidebar.agents]
+row_gap = 1
+rows = [
+    ["state_icon", "workspace", "tab"],
+    ["agent", "state_text"],
+]
 
 [keys]
 prefix = "ctrl+n"
